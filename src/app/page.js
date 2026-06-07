@@ -1,202 +1,243 @@
 'use client';
 import Link from 'next/link';
-import ProfessionalCard from '@/components/ProfessionalCard';
-import Card from '@/components/Card';
+import { useState } from 'react';
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState('');
+
   const categories = [
-    { title: 'Electrician', icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ), color: 'bg-blue-500' },
-    { title: 'Painter', icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-      </svg>
-    ), color: 'bg-orange-500' },
-    { title: 'Developer', icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    ), color: 'bg-indigo-500' },
-    { title: 'Tailoring', icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 11-4.243 4.243 3 3 0 014.243-4.243zm0-5.758a3 3 0 11-4.243-4.243 3 3 0 014.243 4.243z" />
-      </svg>
-    ), color: 'bg-pink-500' },
-    { title: 'Home Services', icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ), color: 'bg-green-500' },
+    {
+      key: 'Finance & Accounting',
+      icon: '$',
+      color: 'bg-purple-50 text-primary',
+      subcategories: ['Finance Modeling & Valuation', 'Fractional CFO & Advisory', 'Global Tax Strategy & Compliance', 'Finance & Auditing']
+    },
+    {
+      key: 'Legal Services',
+      icon: '⚖',
+      color: 'bg-pink-50 text-accent',
+      subcategories: ['Intellectual Property (IP)', 'International Trade & Immigration', 'Real Estate & Personal Law', 'On-ground Legal Service']
+    },
+    {
+      key: 'Video & Animation',
+      icon: '🎬',
+      color: 'bg-indigo-50 text-indigo-600',
+      subcategories: ['Animation & Motion Graphics', '3D Modeling, VFX & CGI', 'Video Post-Production & Editing', 'On-ground Video Services']
+    },
+    {
+      key: 'Design & Graphics',
+      icon: '🎨',
+      color: 'bg-violet-50 text-violet-700',
+      subcategories: ['UI/UX & Web Design', 'Architecture & Spatial Design', 'Marketing & Promotional Design', 'Packaging, Print & Product Design']
+    }
+  ];
+
+  const mockPros = [
+    { _id: '1', name: 'Sarah Jenkins', skill: 'Startup & Pitch Deck Financials', location: 'London, UK', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80', rating: 4.9 },
+    { _id: '2', name: 'David Miller', skill: 'Trademark Search & Filing', location: 'New York, US', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=80', rating: 4.8 },
+    { _id: '3', name: 'Elena Rostova', skill: '3D Product Animation', location: 'Berlin, DE', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop&q=80', rating: 5.0 },
+    { _id: '4', name: 'Marc Thorne', skill: 'Website & Landing Page Design', location: 'San Francisco, US', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80', rating: 4.7 }
   ];
 
   const testimonials = [
-    { name: "Rahul Sharma", role: "Homeowner", text: "Found an amazing electrician within minutes. The service was professional and affordable." },
-    { name: "Priya Singh", role: "Entrepreneur", text: "Asutos Geeks helped me find a skilled developer for my startup. Highly recommended!" },
-    { name: "Anita Devi", role: "Boutique Owner", text: "The tailoring services here are exceptional. It's great to see a platform empowering local workers." }
+    { name: "Sophia Carter", role: "CEO, Nexa Corp", text: "Having our 3-Statement financial model prepared by Asutos Geeks was a game changer for our Series A funding. Absolute professionals." },
+    { name: "Julian Alvarez", role: "Creator & Streamer", text: "The YouTuber rigging and custom overlays transformed my stream style. Fast delivery and exceptional creative talent!" },
+    { name: "Hannah Goldstein", role: "Real Estate Director", text: "I hired an on-ground property surveyor here. Vetted profiles, secure payments, and outstanding communication throughout the process." }
   ];
 
   return (
-    <div className="flex flex-col gap-16 pb-16">
+    <div className="flex flex-col gap-20 pb-24 relative min-h-screen bg-white">
+
       {/* Hero Section */}
-      <section className="h-[90vh] bg-white px-4 sm:px-10 lg:px-16 flex items-center border-b border-gray-50 overflow-hidden relative">
-        <div className="w-full flex flex-col lg:flex-row items-center gap-16 py-12">
-          {/* Left Side: Content */}
-          <div className="w-full lg:w-1/2">
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-              Book Trusted Services at <br />
-              <span className="text-primary">Your Doorstep</span>.
-            </h1>
-            <p className="text-gray-500 text-lg mb-8 max-w-lg font-medium">
-              Electricians, Tailors, Developers & More. Get professional help from the most skilled experts in your local area.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-10">
-              <Link href="/professionals" className="bg-accent text-white px-8 py-3.5 rounded-2xl font-bold hover:bg-orange-600 transition-all shadow-xl shadow-accent/20">
-                Explore Services
-              </Link>
-              <Link href="/pro/register" className="bg-white border-2 border-primary text-primary px-8 py-3.5 rounded-2xl font-bold hover:bg-primary hover:text-white transition-all">
-                Become a Pro
-              </Link>
+      <section className="relative pt-14 pb-20 px-4 sm:px-10 lg:px-16 overflow-hidden gradient-hero border-b border-purple-50">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+
+          {/* Left Content */}
+          <div className="w-full lg:w-1/2 flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 bg-primary-light border border-purple-100 rounded-full px-4 py-1.5 w-fit mb-7">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-ping" />
+              <span className="text-[10px] font-normal uppercase tracking-widest text-primary">Workspace Reinvented</span>
             </div>
 
-            <div className="flex items-center gap-4 text-gray-400">
+            <h1 className="text-4xl sm:text-6xl font-light text-foreground mb-5 leading-tight tracking-tight">
+              Elite Freelance <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent font-normal">Talent on Demand</span>.
+            </h1>
+
+            <p className="text-gray-400 text-sm md:text-base mb-8 max-w-lg font-normal leading-relaxed">
+              Find pre-vetted specialists in Corporate Finance, Intellectual Property Law, CGI Production & UX Engineering. Built for ambitious enterprises and creative studios.
+            </p>
+
+            {/* Search */}
+            <div className="relative max-w-md w-full mb-10 z-30">
+              <div className="bg-white border border-purple-100 shadow-premium p-1 rounded-2xl flex items-center gap-2">
+                <div className="flex-grow flex items-center gap-2.5 px-4 py-3">
+                  <svg className="w-4 h-4 text-primary/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                  <input
+                    type="text"
+                    placeholder="Enter skill (e.g. Patent Drafting)..."
+                    className="w-full focus:outline-none text-xs font-normal text-foreground placeholder:text-gray-400"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                </div>
+                <Link
+                  href={`/professionals?skill=${encodeURIComponent(searchQuery)}`}
+                  className="bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-xl font-normal text-xs transition-all shadow-lg shadow-primary/20"
+                >
+                  Search
+                </Link>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 text-gray-400">
               <div className="flex -space-x-2">
-                {[12,14,23,32].map(i => (
-                  <img key={i} src={`https://i.pravatar.cc/100?img=${i}`} alt="" className="w-8 h-8 rounded-full border-2 border-white shadow-sm" />
+                {[12, 18, 23, 32].map(i => (
+                  <img key={i} src={`https://i.pravatar.cc/100?img=${i}`} alt="" className="w-7 h-7 rounded-full border-2 border-white shadow-sm" />
                 ))}
               </div>
-              <p className="text-sm font-medium">Trusted by <span className="font-bold text-foreground">10k+ customers</span></p>
+              <p className="text-xs font-normal">Trusted by <span className="font-medium text-foreground">1,200+ global brands</span></p>
             </div>
           </div>
 
-          {/* Right Side: Image Grid */}
-          <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4 h-[70vh]">
-            <div className="h-full rounded-3xl overflow-hidden shadow-2xl relative group">
-              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600" alt="Electrician" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <span className="absolute bottom-6 left-6 text-white font-bold">Verified Experts</span>
-            </div>
-            <div className="flex flex-col gap-4 h-full">
-              <div className="h-1/2 rounded-3xl overflow-hidden shadow-2xl relative group">
-                <img src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?auto=format&fit=crop&q=80&w=400" alt="Tailor" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              </div>
-              <div className="h-1/2 rounded-3xl overflow-hidden shadow-2xl relative group">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=400" alt="Office" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              </div>
-            </div>
+          {/* Right: Service Cards */}
+          <div className="w-full lg:w-1/2 grid grid-cols-2 gap-5">
+            {categories.map((cat, i) => (
+              <Link
+                key={cat.key}
+                href={`/professionals?category=${encodeURIComponent(cat.key)}`}
+                className={`bg-white border border-gray-100 rounded-[2rem] p-6 shadow-soft hover:shadow-premium hover:border-purple-100 transition-all duration-300 flex flex-col ${i % 2 === 1 ? 'mt-6' : ''}`}
+              >
+                <div className={`w-10 h-10 rounded-xl ${cat.color} flex items-center justify-center text-lg mb-4`}>
+                  {cat.icon}
+                </div>
+                <h3 className="text-sm font-medium text-foreground mb-2">{cat.key}</h3>
+                <p className="text-[11px] font-normal text-gray-400 leading-relaxed">{cat.subcategories[0]}, {cat.subcategories[1]} & more.</p>
+              </Link>
+            ))}
           </div>
-        </div>
-      </section>
-
-      {/* Professional Quick Search */}
-      <section className="px-4 sm:px-10 lg:px-16 -mt-12 relative z-20">
-        <div className="max-w-5xl mx-auto bg-white p-2 rounded-[2rem] shadow-2xl border border-gray-100 flex flex-col md:flex-row items-center gap-2">
-          <div className="flex-grow flex items-center gap-3 px-6 py-4 border-b md:border-b-0 md:border-r border-gray-100 w-full md:w-auto">
-            <svg className="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <input type="text" placeholder="What service do you need?" className="w-full focus:outline-none text-sm font-bold text-foreground placeholder:text-gray-400" />
-          </div>
-          <div className="flex-grow flex items-center gap-3 px-6 py-4 w-full md:w-auto">
-            <svg className="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            </svg>
-            <input type="text" placeholder="Enter City/Location" className="w-full focus:outline-none text-sm font-bold text-foreground placeholder:text-gray-400" />
-          </div>
-          <button className="bg-primary text-white px-10 py-4 rounded-3xl font-bold text-sm hover:bg-blue-700 transition-all shadow-xl shadow-primary/20 w-full md:w-auto">
-            Find Professionals
-          </button>
         </div>
       </section>
 
       {/* Categories Section */}
-      <section className="px-4 sm:px-10 lg:px-16">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-10">
-          <div className="max-w-xl">
-            <h2 className="text-3xl font-bold text-foreground mb-2">Explore Categories</h2>
-            <p className="text-gray-500 text-sm">Find the right expert for your specific needs across various industries.</p>
-          </div>
-          <Link href="/professionals" className="text-primary font-bold text-sm hover:underline">View all categories →</Link>
+      <section className="px-4 sm:px-10 lg:px-16 max-w-7xl mx-auto w-full">
+        <div className="text-center max-w-xl mx-auto mb-14">
+          <h2 className="text-3xl font-light text-foreground mb-3">Explore our Workspaces</h2>
+          <p className="text-gray-400 text-sm font-normal">Select an industry vertical to explore detailed sub-services and hiring solutions.</p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {categories.map((cat, i) => (
-            <Link key={i} href={`/professionals?category=${cat.title}`} className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all text-center">
-              <div className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform text-2xl">
-                {cat.icon}
-              </div>
-              <h3 className="font-bold text-sm text-foreground">{cat.title}</h3>
-            </Link>
-          ))}
-        </div>
-      </section>
 
-      {/* Featured Professionals Section */}
-      <section className="px-4 sm:px-10 lg:px-16">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-10">
-          <div className="max-w-xl">
-            <h2 className="text-3xl font-bold text-foreground mb-2">Top Rated Professionals</h2>
-            <p className="text-gray-500 text-sm">Our most trusted and highly-rated experts ready to assist you.</p>
-          </div>
-          <Link href="/professionals" className="bg-primary/5 text-primary px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-primary/10 transition-all">View All Experts</Link>
-        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { _id: '1', name: 'Arjun Sharma', skill: 'Electrician', location: 'Delhi, IN', image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400', rating: 4.9 },
-            { _id: '2', name: 'Priya Patel', skill: 'Tailoring', location: 'Mumbai, IN', image: 'https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=400', rating: 4.8 },
-            { _id: '3', name: 'Rahul Verma', skill: 'Painter', location: 'Bangalore, IN', image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400', rating: 4.7 },
-            { _id: '4', name: 'Sonia Khan', skill: 'Developer', location: 'Hyderabad, IN', image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400', rating: 5.0 },
-          ].map((pro) => (
-            <div key={pro._id} className="scale-95 hover:scale-100 transition-transform duration-500">
-              <ProfessionalCard professional={pro} />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Women Empowerment Section */}
-      <section className="bg-foreground py-16 text-white overflow-hidden relative mx-4 sm:mx-10 lg:mx-16 rounded-[2.5rem]">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 skew-x-12 translate-x-32" />
-        <div className="max-w-full mx-auto px-10 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">Empowering Women through Skill & Opportunity</h2>
-              <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                We believe in the power of home-based growth. Asutos Geeks provides a platform for women to showcase their skills in tailoring, cooking, and handicrafts.
-              </p>
-              <Link href="/pro/register" className="inline-block bg-primary text-white px-10 py-4 rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-xl shadow-primary/20">
-                Join the Movement
+          {categories.map((cat) => (
+            <div key={cat.key} className="bg-white border border-gray-100 rounded-[2rem] p-7 hover:border-purple-100 hover:shadow-premium transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div className={`w-10 h-10 rounded-xl ${cat.color} flex items-center justify-center text-lg mb-5`}>
+                  {cat.icon}
+                </div>
+                <h3 className="text-sm font-medium text-foreground mb-4">{cat.key}</h3>
+                <ul className="space-y-2.5 mb-7">
+                  {cat.subcategories.map((sub) => (
+                    <li key={sub} className="flex items-center gap-2">
+                      <span className="w-1 h-1 rounded-full bg-purple-200 flex-shrink-0" />
+                      <Link
+                        href={`/professionals?category=${encodeURIComponent(sub)}`}
+                        className="text-[11px] font-normal text-gray-500 hover:text-primary transition-colors"
+                      >
+                        {sub}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Link
+                href={`/professionals?category=${encodeURIComponent(cat.key)}`}
+                className="w-full text-center py-3 rounded-xl bg-primary-light text-primary font-normal text-xs hover:bg-primary hover:text-white transition-all"
+              >
+                Explore Workspace
               </Link>
             </div>
-            <div className="relative">
-              <div className="bg-gray-800 rounded-3xl aspect-square overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800" alt="Women Empowerment" className="w-full h-full object-cover" />
+          ))}
+        </div>
+      </section>
+
+      {/* Featured Professionals */}
+      <section className="px-4 sm:px-10 lg:px-16 max-w-7xl mx-auto w-full">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-5 mb-12">
+          <div className="max-w-xl">
+            <h2 className="text-3xl font-light text-foreground mb-2">Featured Industry Experts</h2>
+            <p className="text-gray-400 text-sm font-normal">Fully verified specialists with top performance metrics.</p>
+          </div>
+          <Link href="/professionals" className="bg-primary/5 text-primary px-6 py-2.5 rounded-xl font-normal text-xs hover:bg-primary/10 transition-all">
+            View All Experts
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {mockPros.map((pro) => (
+            <div key={pro._id} className="bg-white rounded-[2rem] overflow-hidden border border-gray-100 hover:border-purple-100 transition-all duration-500 group flex flex-col hover:shadow-[0_20px_60px_-15px_rgba(109,40,217,0.12)]">
+              <div className="relative h-52 w-full overflow-hidden">
+                <img src={pro.image} alt={pro.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-[10px] font-normal text-primary flex items-center gap-1">
+                  <span className="text-accent">★</span> {pro.rating.toFixed(1)}
+                </div>
+                <div className="absolute bottom-3 left-3">
+                  <span className="bg-primary text-white text-[9px] font-normal uppercase tracking-wide px-2.5 py-1 rounded-md">
+                    {pro.skill}
+                  </span>
+                </div>
+              </div>
+              <div className="p-5 flex flex-col flex-grow">
+                <h3 className="text-sm font-medium text-foreground mb-1 group-hover:text-primary transition-colors">{pro.name}</h3>
+                <p className="text-[11px] font-normal text-gray-400 mb-5">{pro.location}</p>
+                <button className="mt-auto w-full py-3 rounded-xl bg-primary-light text-primary font-normal text-xs hover:bg-primary hover:text-white transition-all duration-300 border border-purple-100 hover:border-primary">
+                  Book Expert Now
+                </button>
               </div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Enterprise Banner */}
+      <section className="mx-4 sm:mx-10 lg:mx-16 bg-foreground text-white rounded-[2.5rem] p-12 lg:p-16 relative overflow-hidden max-w-7xl lg:mx-auto">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 skew-x-12 translate-x-32" />
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="text-[10px] font-normal uppercase tracking-widest text-primary mb-4 block">Enterprise Solutions</span>
+            <h2 className="text-3xl md:text-4xl font-light mb-5 leading-tight">Elite Talent. Scaled for your Business.</h2>
+            <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-md font-normal">
+              Build your custom contingent workforce. We handle complete contract compliance, global B2B payments, and NDAs out-of-the-box.
+            </p>
+            <Link href="/pro/register" className="inline-block bg-primary hover:bg-primary-hover text-white px-8 py-3.5 rounded-2xl font-normal text-xs transition-all shadow-xl shadow-primary/20">
+              Hire for Business
+            </Link>
+          </div>
+          <div className="relative h-64 lg:h-80 rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Team Workspace" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="px-4 sm:px-10 lg:px-16">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Voices of Trust</h2>
-          <p className="text-gray-500">See why thousands of customers love Asutos Geeks.</p>
+      {/* Testimonials */}
+      <section className="px-4 sm:px-10 lg:px-16 max-w-7xl mx-auto w-full">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl font-light text-foreground mb-3">Client Case Studies</h2>
+          <p className="text-gray-400 text-sm font-normal">See how leading companies integrate our specialized talents.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 flex flex-col justify-between">
-              <div>
-                <p className="text-gray-600 italic leading-relaxed text-sm">"{t.text}"</p>
-              </div>
-              <div className="mt-8 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-gray-100" />
+            <div key={i} className="bg-white border border-gray-100 p-8 rounded-[2rem] shadow-soft flex flex-col justify-between hover:shadow-premium hover:border-purple-100 transition-all">
+              <p className="text-gray-500 italic leading-relaxed text-sm font-normal mb-8">"{t.text}"</p>
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-primary-light flex items-center justify-center font-medium text-primary text-sm">
+                  {t.name[0]}
+                </div>
                 <div>
-                  <h4 className="font-bold text-foreground text-sm">{t.name}</h4>
-                  <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">{t.role}</p>
+                  <h4 className="font-medium text-foreground text-xs">{t.name}</h4>
+                  <p className="text-[10px] text-primary font-normal tracking-wide">{t.role}</p>
                 </div>
               </div>
             </div>

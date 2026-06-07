@@ -1,0 +1,24 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+import Navbar from './Navbar';
+import Footer from './Footer';
+
+export default function ConditionalLayout({ children }) {
+  const pathname = usePathname() || '';
+  const isAdmin = pathname.startsWith('/admin');
+
+  if (isAdmin) {
+    return <main className="min-h-screen bg-slate-50">{children}</main>;
+  }
+
+  return (
+    <>
+      <Navbar />
+      <main className="min-h-screen">
+        {children}
+      </main>
+      <Footer />
+    </>
+  );
+}

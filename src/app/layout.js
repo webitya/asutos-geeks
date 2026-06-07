@@ -1,14 +1,13 @@
 import { Inter } from 'next/font/google';
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import AuthProvider from "@/components/AuthProvider";
+import ConditionalLayout from "@/components/ConditionalLayout";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], weight: ['300', '400', '500', '600'] });
 
 export const metadata = {
-  title: "Asutos Geeks | Trusted Local Services",
-  description: "Book trusted electricians, tailors, developers and more at your doorstep.",
+  title: "Asutos Geeks | Elite Freelance Workspace",
+  description: "Find pre-vetted specialists in Finance, Legal Services, Video Animation, and Design. Built for ambitious enterprises and creative studios.",
 };
 
 export default function RootLayout({ children }) {
@@ -16,15 +15,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <AuthProvider>
-          <Navbar />
-          <main className="min-h-screen">
+          <ConditionalLayout>
             {children}
-          </main>
-          <Footer />
+          </ConditionalLayout>
         </AuthProvider>
       </body>
     </html>
   );
 }
-
-
