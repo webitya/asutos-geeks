@@ -1,6 +1,6 @@
-import dbConnect from '../../lib/mongodb';
-import Professional from '../../models/Professional';
-import Contact from '../../models/Contact';
+import dbConnect from '@/lib/mongodb';
+import Professional from '@/models/Professional';
+import Contact from '@/models/Contact';
 
 export default async function handler(req, res) {
   if (req.method !== 'DELETE') return res.status(405).json({ message: 'Method not allowed' });
