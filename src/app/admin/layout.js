@@ -44,7 +44,7 @@ export default function AdminLayout({ children }) {
       <aside className="w-64 bg-white border-r border-gray-200 hidden md:flex flex-col">
         <div className="p-6 border-b border-gray-100">
           <Link href="/admin/dashboard" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-primary">Asutos</span>
+            <span className="text-xl font-bold text-primary">Wetawork</span>
             <span className="text-xl font-bold text-accent">Geeks</span>
           </Link>
           <span className="text-[10px] uppercase tracking-widest font-black text-gray-400 mt-1 block">Admin Control</span>

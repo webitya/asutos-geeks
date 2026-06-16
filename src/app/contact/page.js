@@ -47,7 +47,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground">Email Us</h4>
-                  <p className="text-gray-500">support@asutosgeeks.com</p>
+                  <p className="text-gray-500">support@wetaworkgeeks.com</p>
                 </div>
               </div>
               <div className="flex gap-4">

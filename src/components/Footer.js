@@ -4,9 +4,9 @@ import Link from 'next/link';
 export default function Footer() {
   const departments = [
     { label: 'Finance & Accounting', href: '/professionals?category=Finance%20%26%20Accounting' },
-    { label: 'Legal Services', href: '/professionals?category=Legal%20Services' },
-    { label: 'Video & Animation', href: '/professionals?category=Video%20%26%20Animation' },
-    { label: 'Design & Graphics', href: '/professionals?category=Design%20%26%20Graphics' }
+    { label: 'Legal', href: '/professionals?category=Legal' },
+    { label: 'Video & Film', href: '/professionals?category=Video%20%26%20Film' },
+    { label: 'Graphics & Design', href: '/professionals?category=Graphics%20%26%20Design' }
   ];
 
   const socialLinks = [
@@ -47,7 +47,7 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white shadow-md shadow-primary/20">
                 <span className="text-sm font-medium">A</span>
               </div>
-              <span className="text-lg font-medium text-foreground">Asutos <span className="text-primary">Geeks</span></span>
+              <span className="text-lg font-medium text-foreground">Wetawork <span className="text-primary">Geeks</span></span>
             </Link>
             <p className="text-gray-400 text-sm font-normal leading-relaxed max-w-sm mb-7">
               Elite freelance workspace. Connecting businesses with pre-vetted professionals in Finance, Law, Video & Graphics.
@@ -111,7 +111,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-5">
-            <p className="text-[11px] text-gray-300 font-normal">© 2026 Asutos Geeks. All rights reserved.</p>
+            <p className="text-[11px] text-gray-300 font-normal">© 2026 Wetawork. All rights reserved.</p>
             <div className="flex gap-5">
               <Link href="#" className="text-[11px] text-gray-300 hover:text-primary font-normal">Privacy Policy</Link>
               <Link href="#" className="text-[11px] text-gray-300 hover:text-primary font-normal">Terms of Use</Link>

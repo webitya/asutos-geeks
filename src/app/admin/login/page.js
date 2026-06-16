@@ -47,7 +47,7 @@ export default function AdminLogin() {
       <div className="max-w-md w-full bg-white rounded-3xl shadow-soft border border-gray-100 p-10">
         <div className="text-center mb-10">
           <div className="flex justify-center gap-2 mb-4">
-            <span className="text-3xl font-bold text-primary">Asutos</span>
+            <span className="text-3xl font-bold text-primary">Wetawork</span>
             <span className="text-3xl font-bold text-accent">Geeks</span>
           </div>
           <h1 className="text-2xl font-bold text-foreground">Admin Portal</h1>

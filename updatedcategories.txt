@@ -1,0 +1,1033 @@
+# JIPSY — Complete Category & Filter Reference
+> Source: okay.xlsx | Sheet 1: Jipsy_v1 copy · Sheet 2: Workplace & Contract
+> All data extracted in full depth — zero entries omitted
+
+---
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SHEET 1 — SERVICE CATEGORIES (15 Total)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+---
+
+## 1. FINANCE & ACCOUNTING
+
+---
+
+### 1.1 Corporate Bookkeeping & Cloud Accounting
+**Biz Type:** B2B
+
+- "Catch-up & Clean-Up" Bookkeeping
+- Accounts Payable & Receivable (AP/AR)
+- Payroll Administration
+
+---
+
+### 1.2 Finance Modeling & Valuation
+**Biz Type:** Remote B2B
+
+- 3-Statement Finance Modeling
+- Startup & Pitch Deck Financials
+- Project Finance & Underwriting
+
+---
+
+### 1.3 Global Tax Strategy & Compliance
+**Biz Type:** Remote B2B, B2C
+
+- Cross-Border Corporate Structuring
+- Statutory Tax Filing
+- Expat & Personal Tax Returns *(B2C)*
+
+---
+
+### 1.4 Fractional CFO & Advisory
+**Biz Type:** Remote B2B
+
+- Cash Flow Forecasting
+- Budget Variance Analysis
+- Merger & Acquisitions (M&A) Due Diligence
+
+---
+
+### 1.5 On-Ground Finance & Auditing
+**Biz Type:** Hyperlocal
+
+- Physical Asset & Inventory Verification
+- On-Site Project Cost Auditing
+- Bureaucracy & Compliance
+- Corporate CPA
+- Trading
+
+---
+---
+
+## 2. LEGAL
+
+---
+
+### 2.1 Corporate & Contract Law
+**Biz Type:** Remote B2B
+
+- Commercial Contract Drafting
+- Digital Policy Creation
+- NDAs & Non-Competes
+- Employment Law Consulting
+
+---
+
+### 2.2 Intellectual Property (IP)
+**Biz Type:** Remote B2B, B2C
+
+- Trademark Search & Filing
+- Patent Drafting
+- Copyright & DMCA Takedown
+
+---
+
+### 2.3 Legal Research & Paralegal Services
+**Biz Type:** Remote B2B
+
+- Tender & Procurement Auditing
+- Case Law & Precedent Research
+- Demand Letter Drafting
+
+---
+
+### 2.4 International Trade & Immigration
+**Biz Type:** Remote B2B, B2C
+
+- Cross-Border Trade Compliance
+- Immigration & Visa Assistance
+
+---
+
+### 2.5 Real Estate & Personal Law
+**Biz Type:** Remote B2C
+
+- Real Estate & Construction Contracts
+- Estate Planning
+- Physical Title & Property Searches
+
+---
+
+### 2.6 On-Ground Legal Service
+**Biz Type:** Hyperlocal
+
+- Company Incorporation & Registration
+- Notary Public Services
+- Process Serving
+
+---
+---
+
+## 3. VIDEO & FILM
+
+---
+
+### 3.1 Video Editing & Post-Production
+**Biz Type:** Remote B2B, Creator
+
+- Social Media & Short-Form Editing
+- Corporate & Commercial Editing
+- Faceless / "Cash Cow" YouTube Editing
+- Color Grading & VFX
+
+---
+
+### 3.2 Animation & Motion Graphics
+**Biz Type:** Remote B2B
+
+- 2D & 3D Explainer Video
+- Motion Graphics & Kinetic Typography
+- 3D Product Animation
+- UI/UX & Lottie Animations
+
+---
+
+### 3.3 Streamer & Creator Support
+**Biz Type:** Remote B2C, B2B
+
+- Stream Overlays & Assets
+- Youtuber Rigging
+- Intro/Outro & Logo Animation
+
+---
+
+### 3.4 AI Video & Generative Media
+**Biz Type:** Booming Frontier, Creator
+
+- AI Video Generation & Prompt Engineering
+- AI Video Translation & Dubbing
+
+---
+
+### 3.5 3D Modeling, VFX & CGI
+**Biz Type:** Remote B2B
+
+- 3D Character Modeling & Rigging
+- 3D Product & Environment Modeling
+- VFX & Compositing
+
+---
+
+### 3.6 Video Post-Production & Editing
+**Biz Type:** Remote B2B, Creators
+
+- Short-Form Video Editing
+- Corporate & Documentary Editing
+- Color Grading & Correction
+- Audio Post & Sound Design
+
+---
+
+### 3.7 Pre-Production & Creative Writing
+**Biz Type:** Remote B2B
+
+- Screenwriting & YouTube Scriptwriting
+- Storyboarding
+- Virtual Casting Directors
+
+---
+
+### 3.8 Video, Film & Modeling *(On-Ground)*
+**Biz Type:** Hyperlocal
+
+- Local Cinematography & Videography
+- Commercial Drone Piloting
+- On-Set Makeup & Wardrobe Styling
+- Set Design & Grip/Lighting
+
+---
+
+### 3.9 On-Screen Talent & Commercial Modeling
+**Biz Type:** Remote, Hyperlocal
+
+- UGC (User-Generated Content) Creators
+- Spokesperson Presenters
+- Commercial & Fashion Modeling
+
+---
+---
+
+## 4. GRAPHICS & DESIGN
+
+---
+
+### 4.1 Brand Identity & Corporate Graphics
+**Biz Type:** B2B
+
+- Logo Design
+- Brand Style Guides
+- Corporate Imagery & Asset Integration
+- Presentation Design
+
+---
+
+### 4.2 Architecture & Spatial Design
+**Biz Type:** B2B, B2C
+
+- CAD Drafting & Floor Plans
+- BIM Modeling
+- 3D Architectural Renderings
+- Landscape Design
+
+---
+
+### 4.3 UI/UX & Web Design
+**Biz Type:** B2B
+
+- Website & Landing Page
+- Mobile App UI/UX
+- Iconography
+
+---
+
+### 4.4 Marketing & Promotional Design
+**Biz Type:** B2B, B2C
+
+- Social Media Design
+- Digital Ads & Banners
+- Email Newsletter Templates
+- Infographics
+
+---
+
+### 4.5 Packaging, Print & Product Design
+**Biz Type:** B2B
+
+- Product Packaging & Labels
+- 3D Product Mockups
+- Industrial Design
+- Trade Show Booth Design
+- Print Production Liaison
+
+---
+
+### 4.6 On-Ground Graphics Service
+**Biz Type:** Hyperlocal
+
+- Physical Signage & Wayfinding
+- Vehicle Wrap Design & Prototyping
+
+---
+---
+
+## 5. ENGINEERING & ARCHITECTURE
+
+---
+
+### 5.1 Architectural Design & Planning
+**Biz Type:** Remote B2B, B2C
+
+- 2D CAD Drafting & Floor Plans
+- BIM (Building Information Modeling)
+- Permit Drawings & Compliance
+- Interior & Landscape Architecture
+
+---
+
+### 5.2 Civil & Structural Engineering
+**Biz Type:** Remote B2B, Hyperlocal
+
+- Structural Load Analysis & Calculations
+- Water & Environmental Engineering
+- Civil Site Planning
+
+---
+
+### 5.3 Mechanical, Electrical & Plumbing (MEP)
+**Biz Type:** Remote B2C, B2B, Hyperlocal
+
+- HVAC & Plumbing
+- Electronics & PCB Design
+- Mechanical CAD & Industrial Design
+
+---
+
+### 5.4 3D Rendering & Architectural Visualization
+**Biz Type:** Remote B2B, B2C
+
+- Photorealistic Exterior & Interior Rendering
+- 3D Walkthrough Animations
+
+---
+
+### 5.5 Systems Engineering & Project Management
+**Biz Type:** Remote B2B
+
+- Operations & Maintenance (O&M) Planning
+- Cost Estimation & Quantity Takeoffs
+- Technical Auditing & Data Analysis
+
+---
+
+### 5.6 On-Ground Engineering Services
+**Biz Type:** Hyperlocal
+
+- Site Survey & Laser Scanning
+- Construction Site Auditing & Supervision
+- Physical Prototyping & Fabrication
+- Municipal Bidding & Liaison
+
+---
+---
+
+## 6. SALES & MARKETING
+
+---
+
+### 6.1 Digital Marketing Strategy & Management
+**Biz Type:** Remote B2B
+
+- Social Media Management
+- Digital Marketing Strategy
+- Marketing Automation
+- Influencer Marketing & UGC Management
+
+---
+
+### 6.2 Search & Performance Marketing
+**Biz Type:** Paid Advertising
+
+- Search Engine Marketing (SEM) / PPC
+- Social Media Advertising
+- Affiliate Marketing Management
+
+---
+
+### 6.3 Search Engine Optimization (SEO)
+**Biz Type:** Remote B2B & B2C
+
+- Technical & On-Page SEO
+- Off-Page SEO & Link Building
+- Local SEO & Map Pack Optimization
+
+---
+
+### 6.4 Sales, Lead Generation & Telemarketing
+**Biz Type:** Remote B2B
+
+- B2B Lead Generation & Scraping
+- Cold Calling & Appointment Setting
+- High-Ticket Closing
+- Sales Scripting & Email Sequencing
+
+---
+
+### 6.5 Content & Email Marketing
+**Biz Type:** Remote B2B
+
+- Email Marketing Campaigns
+- Public Relations (PR) & Media Outreach
+- Content Strategy & Calendaring
+
+---
+
+### 6.6 On-Ground Sales & Marketing
+**Biz Type:** Hyperlocal
+
+- Local Brand Ambassadors & Promoters
+- On-Ground Market Research
+- Trade Show & Event Sales Reps
+- Local Out-Of-Home (OOH) Advertising Scouts
+
+---
+---
+
+## 7. DIGITAL & TECHNOLOGY
+
+---
+
+### 7.1 Enterprise Software & Digital Transformation
+**Biz Type:** Remote B2B
+
+- ERP Implementation (SAP, Oracle, NetSuite)
+- CRM Architecture (Salesforce, HubSpot)
+- Digital Project Management & Scrum Master
+
+---
+
+### 7.2 Data Science & Artificial Intelligence
+**Biz Type:** Remote B2B
+
+- AI Integration & Prompt Engineering
+- Machine Learning & Predictive Modeling
+- Data Architecture & Engineering
+- Business Intelligence (BI) & Dashboard
+
+---
+
+### 7.3 Software & Application Engineering
+**Biz Type:** Remote B2B, B2C
+
+- Full-Stack Web Development
+- Mobile App Development
+- API Development & Integration
+
+---
+
+### 7.4 Cloud Infrastructure & Cybersecurity
+**Biz Type:** Remote B2B
+
+- Cloud Architecture (AWS, Azure, GCP)
+- DevOps (Development Operations)
+- Cybersecurity & Penetration Testing
+
+---
+
+### 7.5 On-Ground IT Services
+**Biz Type:** Hyperlocal, Physical
+
+- Commercial Network Installation
+- Smart Tech & IoT Deployment
+- POS (Point of Sale) System Setup
+- Hardware Diagnostics & Data Recovery
+
+---
+---
+
+## 8. MUSIC & AUDIO
+
+---
+
+### 8.1 Music Production & Composition
+**Biz Type:** Remote B2B, B2C
+
+- Custom Music Composition
+- Beat Making & Instrumentals
+- Songwriting & Lyricism
+- Session Musicians & Vocalists
+
+---
+
+### 8.2 Audio Engineering & Post-Production
+**Biz Type:** Remote B2B
+
+- Mixing & Mastering
+- Audio Restoration & Cleanup
+- Audiobook Post-Production
+
+---
+
+### 8.3 Voice Over & Voice Acting
+**Biz Type:** Remote B2B, B2C
+
+- Commercial Voice Over
+- Character Voice Acting
+- Audiobook Narration
+
+---
+
+### 8.4 Podcast Production
+**Biz Type:** Remote B2B, Creators
+
+- Podcast Editing
+- Podcast Intros & Outros
+
+---
+
+### 8.5 Sound Design & Sonic Branding
+**Biz Type:** Remote B2B
+
+- Foley & Sound Effects (SFX)
+- UI/UX Sound Design
+- Sonic Branding (Audio Logos)
+
+---
+
+### 8.6 AI Audio & Generative Sound
+**Biz Type:** Booming Frontier
+
+- AI Voice Cloning & Text-to-Speech
+- AI Music Generation
+
+---
+
+### 8.7 On-Ground Audio Services
+**Biz Type:** Hyperlocal
+
+- Live Sound Engineering
+- Studio Session Booking
+- Event DJs & Live Performers
+- Location Sound Recording (Boom Operators)
+
+---
+---
+
+## 9. LOGISTICS & SUPPLY CHAIN
+
+---
+
+### 9.1 Supply Chain Strategy & Consulting
+**Biz Type:** Remote B2B
+
+- Supply Chain Network Design
+- Logistics Auditing & Optimization
+- Sustainability Consulting
+
+---
+
+### 9.2 Procurement & Sourcing
+**Biz Type:** Remote B2B
+
+- Global Supplier Sourcing
+- RFQ & Vendor Negotiation
+- Dropshipping Automation
+
+---
+
+### 9.3 Inventory & Warehouse Management
+**Biz Type:** Remote B2B
+
+- Demand Forecasting
+- ERP & WMS Implementation
+- Inventory Reconciliation
+
+---
+
+### 9.4 Freight, Customs & Transportation Logistics
+**Biz Type:** Remote B2B
+
+- Freight Forwarding Coordination
+- Customs Brokerage Consulting
+- Last-Mile Routing Optimization
+
+---
+
+### 9.5 On-Ground Logistics
+**Biz Type:** Hyperlocal
+
+- Physical Factory & Supplier Audits
+- On-Site Pre-Shipment Inspections
+- Hyperlocal Dispatch & Fleet Coordination
+- "Last-Mile" Runners & Courier Services
+
+---
+---
+
+## 10. HR & TALENT
+
+---
+
+### 10.1 Recruitment & Talent Acquisition
+
+- Talent Sourcing
+- Full-Cycle Recruiting
+- Job Description Writing
+- Screening & Interviewing
+- Applicant Tracking System (ATS) Management
+
+---
+
+### 10.2 HR Consulting & Strategy
+
+- HR Policy Development
+- Compliance & Labor Law
+- Organizational Development
+- Diversity, Equity & Inclusion (DEI)
+
+---
+
+### 10.3 HR Administration & Operations
+
+- Onboarding & Offboarding
+- Payroll Administration
+- Compensation & Benefits Setup
+- Background Checks & Verifications
+
+---
+
+### 10.4 Talent Management & Employee Relations
+
+- Performance Management
+- Employee Engagement & Retention
+- Conflict Resolution / Employee Relations
+- Learning & Development (L&D)
+
+---
+
+### 10.5 Job Seeker & Career Services
+**Biz Type:** B2C
+
+- Resume & CV Writing
+- Cover Letter Writing
+- LinkedIn Profile Optimization
+- Career Coaching & Interview Prep
+
+---
+
+### 10.6 Manpower Supply & Labor Contracting
+**Biz Type:** Hyperlocal & Industrial
+
+- Civil & Construction Labor
+- Infrastructure & Utility Crews
+- Industrial & Equipment Operators
+- Facility Management & Site Supervision
+
+---
+
+### 10.7 BPO & Remote Team Augmentation
+
+- Customer Support Teams
+- Virtual Assistant (VA) Agencies
+- Sales & Lead Generation Teams
+
+---
+---
+
+## 11. CONSULTING & STRATEGY
+
+---
+
+### 11.1 Business & Management Consulting
+
+- Business Plan Writing
+- Startup Consulting
+- Operations Consulting
+- Change Management
+- Organizational Design
+
+---
+
+### 11.2 Financial Consulting & Strategy
+
+- Financial Modeling & Forecasting
+- Virtual CFO (vCFO) Services
+- Pricing Strategy
+- Mergers & Acquisitions (M&A) Advisory
+
+---
+
+### 11.3 Marketing & Sales Strategy
+
+- Go-to-Market (GTM) Strategy
+- Market Research & Competitor Analysis
+- Brand Strategy
+- Sales Strategy & Funnel Optimization
+
+---
+
+### 11.4 IT & Technology Strategy (Digital Transformation)
+
+- Digital Transformation
+- IT Architecture & Roadmapping
+- Cybersecurity Strategy
+- Data Strategy & Business Intelligence
+
+---
+
+### 11.5 Supply Chain & Logistics Strategy
+
+- Supply Chain Optimization
+- Inventory Management Strategy
+- Vendor & Procurement Strategy
+
+---
+---
+
+## 12. BIOTECHNOLOGY & LIFE SCIENCE
+
+---
+
+### 12.1 Bioinformatics & Computational Biology
+
+- Genomics & NGS Data Analysis
+- Structural Biology & Drug Discovery
+- Phylogenetics & Evolutionary Biology
+- Custom Pipeline Development
+
+---
+
+### 12.2 Scientific & Medical Writing
+
+- Academic Paper Writing & Editing
+- Grant Proposal Writing
+- Clinical Trial Documentation
+- Medical Communication (MedComms)
+
+---
+
+### 12.3 Regulatory Affairs & Compliance
+
+- FDA/EMA Submissions
+- Quality Assurance (QA) & Quality Control (QC)
+- Medical Device Compliance
+
+---
+
+### 12.4 Biostatistics & Data Analysis
+
+- Clinical Trial Statistics
+- Epidemiological Modeling
+- Experimental Data Analysis
+
+---
+
+### 12.5 Biotech Business Consulting & Commercialization
+
+- Market Research & Sizing
+- Patent & Intellectual Property (IP) Research
+- Lab Design & Experimental Consulting
+
+---
+---
+
+## 13. TUITION & COACHING
+
+---
+
+### 13.1 Academic Tutoring & Test Prep
+
+- Subject-Specific Tutoring
+- Test & Exam Preparation
+- Homework Help & Assignment Guidance
+- Special Education Tutoring
+
+---
+
+### 13.2 Professional & Career Coaching
+
+- Executive & Leadership Coaching
+- Career Transition Coaching
+- Interview Preparation
+- Business & Entrepreneurship Coaching
+
+---
+
+### 13.3 IT, Tech & Software Training
+
+- Coding Bootcamps & Mentorship
+- Software Training
+- Data Science & Analytics Coaching
+
+---
+
+### 13.4 Language Learning & Communication
+
+- Conversational Language Practice
+- Business Language Coaching
+- Linguistics & Grammar Tutoring
+
+---
+
+### 13.5 Health, Wellness & Life Coaching
+
+- Life Strategy & Mindset Coaching
+- Fitness & Personal Training
+- Nutrition Coaching
+
+---
+
+### 13.6 Creative, Arts & Hobbies
+
+- Music & Vocal Lessons
+- Acting & Public Speaking
+- Creative Writing & Art Coaching
+
+---
+---
+
+## 14. WRITING & TRANSLATION
+
+---
+
+### 14.1 Technical & Professional Writing
+**Biz Type:** Remote B2B
+
+- Technical Manuals & SOPs
+- Proposal & Tender Writing
+- Business Plans & Pitch Decks
+- Academic & Educational Content
+- Whitepapers & Case Studies
+
+---
+
+### 14.2 Copywriting & Sales Conversion
+**Biz Type:** Remote B2B
+
+- Website & Landing Page Copy
+- Email Marketing Sequences
+- Ad Copywriting
+- LinkedIn & Social Media Ghostwriting
+
+---
+
+### 14.3 Content Writing & SEO
+**Biz Type:** Remote B2B & B2C
+
+- SEO Blog Posts & Articles
+
+---
+
+### 14.4 Creative Writing & Ghostwriting
+**Biz Type:** Remote B2B & B2C
+
+- Book & eBook Ghostwriting
+- Scriptwriting
+- Speechwriting
+
+---
+
+### 14.5 Editing & Proofreading
+**Biz Type:** Remote B2B & B2C
+
+- Copyediting & Proofreading
+- Developmental Editing
+
+---
+
+### 14.6 Translation & Localization
+**Biz Type:** Remote B2B & B2C
+
+- Corporate & Document Translation
+- Software & App Localization
+- Subtitling & Closed Captioning
+
+---
+
+### 14.7 On-Ground Language Services
+**Biz Type:** Hyperlocal
+
+- In-Person Interpretation (Simultaneous & Consecutive)
+- Certified & Sworn Translation
+- Real-Time Live Transcription (Stenography)
+
+---
+---
+
+## 15. LIFESTYLE
+
+---
+
+### 15.1 Health, Wellness & Fitness
+**Biz Type:** B2C & Hyperlocal
+
+- Fitness & Movement
+- Nutrition & Dietetics *(B2C & B2B)*
+- Mental Wellness & Coaching *(B2C & B2B)*
+- Health & Medical Professional Services *(B2B)*
+- Alternative & Holistic Lifestyle *(B2C)*
+
+---
+
+### 15.2 Travel & Local Expertise
+
+- Travel Planning & Itinerary Design *(B2C & B2B)*
+- "Boots on the Ground" / Local Ground Agent *(B2B & B2C)*
+- Relocation & Digital Nomad Consulting *(B2C)*
+- Travel Content Creation & Curation *(B2B)*
+
+---
+
+### 15.3 Fashion, Beauty & Personal Style
+
+- Technical Fashion Design & Production
+- Personal Styling & Image Consulting *(B2C)*
+
+---
+
+### 15.4 Gaming & Entertainment
+*(No sub-items listed)*
+
+---
+
+### 15.5 Arts, Crafts & Hobbies
+
+- Music & Vocal Lessons
+- Acting & Public Speaking
+- Creative Writing & Art Coaching
+
+---
+
+### 15.6 Spiritual, Healing & Astrology
+*(No sub-items listed)*
+
+---
+
+### 15.7 Family, Genealogy & Home Management
+*(No sub-items listed)*
+
+---
+
+### 15.8 Coaching, Mentorship & Advice
+*(No sub-items listed)*
+
+---
+
+### 15.9 Home, Space & Environmental Harmony
+
+- Interior Styling & Virtual Staging
+- Vastu Shastra & Feng Shui Consulting
+- Home Organization
+
+---
+---
+---
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SHEET 2 — WORKPLACE, CONTRACT, EDUCATION & CATEGORY VERSIONS
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+---
+
+## A. WORKPLACE TYPES
+
+| # | Workplace |
+|---|-----------|
+| 1 | On-site |
+| 2 | Hybrid |
+| 3 | Remote |
+| 4 | Hyperlocal |
+
+---
+
+## B. CONTRACT / ENGAGEMENT TYPES
+
+| # | Contract Type |
+|---|---------------|
+| 1 | Hourly |
+| 2 | Monthly |
+| 3 | Project Based |
+| 4 | Manufacturing |
+| 5 | Gigs |
+| 6 | Permanent |
+| 7 | Full Time Job |
+| 8 | Night Shift |
+| 9 | Sales |
+| 10 | Affiliation |
+| 11 | Pay per Click |
+| 12 | Pay per Day |
+
+---
+
+## C. EDUCATION — DEGREE LEVELS
+
+| Degree Level |
+|--------------|
+| Bachelors |
+| Under Grad |
+| Masters |
+| Doctorate |
+
+---
+
+## D. EDUCATION — FIELDS / DISCIPLINES
+
+| # | Field / Discipline |
+|---|-------------------|
+| 1 | Civil Engineering |
+| 2 | Mechanical Engineering |
+| 3 | Electrical Engineering |
+| 4 | Accounts |
+| 5 | Economics |
+| 6 | Finance |
+| 7 | Digital Finance |
+| 8 | IT & Computer Engineering |
+| 9 | ITI – Fitter |
+| 10 | ITI – Drone Pilot |
+| 11 | ITI – Plumber |
+| 12 | ITI – Mechanical |
+| 13 | Dip. Survey |
+| 14 | Environmental Engineering |
+| 15 | Supply Chain Management |
+| 16 | HR Management |
+| 17 | Architecture Engineering |
+| 18 | Biotechnology Engineering |
+| 19 | Bioinformatics |
+| 20 | Life Science |
+| 21 | Botany |
+
+---
+
+## E. BROAD SECTOR TAGS (Version 1 vs Version 2)
+
+| # | Version 1 | Version 2 |
+|---|-----------|-----------|
+| 1 | Finance | Finance & Accountant |
+| 2 | Lifestyle | Lifestyle |
+| 3 | Graphics & Design | Graphics & Design |
+| 4 | Legal | Legal |
+| 5 | Video & Film | Music & Video |
+| 6 | Music & Audio | *(not renamed)* |
+| 7 | Writing & Translation | *(not renamed)* |
+| 8 | Logistics & Supply Chain | Logistics & Supply Chain |
+| 9 | HR, Talent & Manpower | HR & Manpower |
+| 10 | Consulting & Strategy | Consulting & Strategy |
+| 11 | Biotechnology & Lifescience | Biotechnology & Lifescience |
+| 12 | Tuition & Coaching | Tuition & Coaching |
+
+---
+
+## F. EDUCATION — BROAD SECTOR TAGS (from Col 12)
+
+| Broad Sector |
+|--------------|
+| Engineering |
+| Technology |
+| BA (Bachelor of Arts) |
+| Education |
+
+---
+
+*End of Document — All data extracted in full depth from both sheets.*

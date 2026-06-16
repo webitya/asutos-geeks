@@ -31,7 +31,7 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
-      subject: 'Asutos Geeks - Login OTP',
+      subject: 'Wetawork - Login OTP',
       text: `Your OTP for login is: ${otp}. It expires in 10 minutes.`,
     });
 

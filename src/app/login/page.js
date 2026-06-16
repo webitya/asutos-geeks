@@ -84,7 +84,7 @@ export default function Login() {
               <span className="text-lg font-medium">A</span>
             </div>
             <div className="flex flex-col text-left">
-              <span className="text-lg font-medium text-foreground tracking-tight leading-none">Asutos <span className="text-primary">Geeks</span></span>
+              <span className="text-lg font-medium text-foreground tracking-tight leading-none">Wetawork <span className="text-primary">Geeks</span></span>
             </div>
           </Link>
           <h1 className="text-xl font-light text-foreground mb-1">Welcome Back</h1>

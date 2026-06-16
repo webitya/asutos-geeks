@@ -20,7 +20,7 @@ export default function About() {
         <div className="max-w-full mx-auto flex flex-col lg:flex-row items-center gap-10">
           <div className="w-full lg:w-1/2">
             <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
-              Redefining Local Services with <span className="text-primary">Asutos Geeks</span>
+              Redefining Local Services with <span className="text-primary">Wetawork</span>
             </h1>
             <p className="text-base text-gray-500 font-medium leading-relaxed max-w-xl">
               We started with a simple vision: to bridge the gap between skilled local talent and the people who need them most.
@@ -94,7 +94,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">Empowering Women.</h2>
               <p className="text-gray-400 text-base leading-relaxed mb-8">
-                A core pillar of Asutos Geeks is the financial independence of women. We digitize skills like tailoring and cooking for home-based professionals.
+                A core pillar of Wetawork is the financial independence of women. We digitize skills like tailoring and cooking for home-based professionals.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/5 p-5 rounded-xl border border-white/10">

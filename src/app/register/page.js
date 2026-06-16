@@ -79,7 +79,7 @@ export default function Register() {
               <span className="text-xl font-medium">A</span>
             </div>
             <div className="flex flex-col text-left">
-              <span className="text-xl font-medium text-foreground tracking-tight leading-none">Asutos <span className="text-primary">Geeks</span></span>
+              <span className="text-xl font-medium text-foreground tracking-tight leading-none">Wetawork <span className="text-primary">Geeks</span></span>
             </div>
           </Link>
           <h1 className="text-2xl font-light text-foreground mb-2">Create Account</h1>

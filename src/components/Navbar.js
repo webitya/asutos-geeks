@@ -1,12 +1,13 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import { CATEGORIES_DATA } from '@/lib/categories';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const scrollRef = useRef(null);
   const { data: session } = useSession();
 
   const handleDropdownOpen = (key) => setActiveDropdown(key);
@@ -56,10 +57,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-md shadow-primary/20 group-hover:scale-105 transition-transform duration-300">
-              <span className="text-base font-medium">A</span>
+              <span className="text-base font-medium">W</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-base font-medium text-foreground tracking-tight leading-none">Asutos <span className="text-primary">Geeks</span></span>
+              <span className="text-base font-medium text-foreground tracking-tight leading-none">Weta<span className="text-primary">work</span></span>
               <span className="text-[9px] font-normal text-gray-400 tracking-widest uppercase">Workspace</span>
             </div>
           </Link>
@@ -128,55 +129,74 @@ export default function Navbar() {
       </div>
 
       {/* Category Sub-Navbar */}
-      <div className="hidden md:block bg-gray-50/60 border-t border-gray-100">
-        <div className="max-w-full mx-auto px-4 sm:px-10 lg:px-16">
-          <div className="flex space-x-10 h-11 items-center justify-start relative">
-            {Object.entries(CATEGORIES_DATA).map(([key, value]) => {
-              const isActive = activeDropdown === key;
-              return (
-                <div
-                  key={key}
-                  className="h-full flex items-center"
-                  onMouseEnter={() => handleDropdownOpen(key)}
-                  onMouseLeave={handleDropdownClose}
-                >
-                  <button className={`h-full flex items-center gap-1.5 text-[11px] font-normal tracking-wide transition-all border-b-2 hover:text-primary ${
-                    isActive ? 'border-primary text-primary' : 'border-transparent text-gray-500'
-                  }`}>
+      <div className="hidden md:block bg-gray-50 border-t border-gray-100 group/nav relative">
+        {/* Left Scroll Arrow attached to absolute screen corner */}
+        <div className="absolute left-0 top-0 h-11 w-16 flex items-center justify-start z-10 pointer-events-none bg-gradient-to-r from-gray-50 via-gray-50 to-transparent">
+           <button onClick={() => scrollRef.current?.scrollBy({ left: -250, behavior: 'smooth' })} className="pointer-events-auto w-11 h-8 rounded-r-full bg-gradient-to-r from-primary to-accent shadow-lg flex items-center justify-center text-white hover:scale-105 origin-left transition-all opacity-90 hover:opacity-100 gap-1 pr-1">
+             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" /></svg>
+             <svg className="w-3.5 h-3.5 opacity-90 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" /></svg>
+           </button>
+        </div>
+
+        {/* Right Scroll Arrow attached to absolute screen corner */}
+        <div className="absolute right-0 top-0 h-11 w-16 flex items-center justify-end z-10 pointer-events-none bg-gradient-to-l from-gray-50 via-gray-50 to-transparent">
+           <button onClick={() => scrollRef.current?.scrollBy({ left: 250, behavior: 'smooth' })} className="pointer-events-auto w-11 h-8 rounded-l-full bg-gradient-to-r from-accent to-primary shadow-lg flex items-center justify-center text-white hover:scale-105 origin-right transition-all opacity-90 hover:opacity-100 gap-1 pl-1">
+             <svg className="w-3.5 h-3.5 opacity-90 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" /></svg>
+             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
+           </button>
+        </div>
+
+        <div className="max-w-full mx-auto pl-16 pr-16">
+          <div className="relative" onMouseLeave={handleDropdownClose}>
+            {/* Using justify-start is critical here to avoid items clipping on the left side */}
+            <div ref={scrollRef} className="flex space-x-8 h-11 items-center justify-start overflow-x-auto no-scrollbar w-full pb-1 scroll-smooth">
+              {Object.entries(CATEGORIES_DATA).map(([key, value]) => {
+                const isActive = activeDropdown === key;
+                return (
+                  <button
+                    key={key}
+                    onMouseEnter={() => handleDropdownOpen(key)}
+                    className={`h-full flex items-center gap-1.5 text-[11px] font-normal tracking-wide transition-all border-b-2 whitespace-nowrap hover:text-primary shrink-0 ${
+                      isActive ? 'border-primary text-primary' : 'border-transparent text-gray-500'
+                    }`}
+                  >
                     {renderIcon(value.icon, "w-3.5 h-3.5")}
                     {value.label}
                     <svg className={`w-3 h-3 transition-transform ${isActive ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
+                );
+              })}
+            </div>
 
-                  {/* Mega Dropdown */}
-                  {isActive && (
-                    <div className="absolute left-0 top-11 w-full bg-white border border-gray-100 shadow-2xl rounded-b-[1.5rem] p-8 grid grid-cols-4 gap-8 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                      {Object.entries(value.subcategories).map(([subTitle, items]) => (
-                        <div key={subTitle} className="flex flex-col">
-                          <h4 className="text-[10px] font-medium text-primary uppercase tracking-wider border-b border-purple-50 pb-2 mb-3">
-                            {subTitle}
-                          </h4>
-                          <ul className="space-y-2">
-                            {items.map((item) => (
-                              <li key={item}>
-                                <Link
-                                  href={`/professionals?skill=${encodeURIComponent(item)}`}
-                                  className="text-[11px] font-normal text-gray-500 hover:text-accent transition-colors block leading-relaxed"
-                                >
-                                  {item}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+            {/* Mega Dropdown Rendered Outside the Overflow Container */}
+            {activeDropdown && CATEGORIES_DATA[activeDropdown] && (
+              <div 
+                className="absolute left-0 top-11 w-full bg-white border border-gray-100 shadow-2xl rounded-b-[1.5rem] p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 z-50 animate-in fade-in slide-in-from-top-2 duration-200"
+                onMouseEnter={() => handleDropdownOpen(activeDropdown)}
+              >
+                {Object.entries(CATEGORIES_DATA[activeDropdown].subcategories).map(([subTitle, items]) => (
+                  <div key={subTitle} className="flex flex-col">
+                    <h4 className="text-[10px] font-medium text-primary uppercase tracking-wider border-b border-purple-50 pb-2 mb-3">
+                      {subTitle}
+                    </h4>
+                    <ul className="space-y-2">
+                      {items.map((item) => (
+                        <li key={item}>
+                          <Link
+                            href={`/professionals?skill=${encodeURIComponent(item)}`}
+                            className="text-[11px] font-normal text-gray-500 hover:text-accent transition-colors block leading-relaxed"
+                          >
+                            {item}
+                          </Link>
+                        </li>
                       ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

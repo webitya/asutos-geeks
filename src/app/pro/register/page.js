@@ -87,7 +87,7 @@ export default function ProRegister() {
         <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent flex items-end p-12">
           <div className="max-w-sm">
             <h2 className="text-3xl font-black text-foreground mb-3 leading-tight">Join <span className="text-primary">Verified Experts</span>.</h2>
-            <p className="text-sm text-gray-500 font-bold">Asutos Geeks empowers professionals with growth tools.</p>
+            <p className="text-sm text-gray-500 font-bold">Wetawork empowers professionals with growth tools.</p>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function ProRegister() {
         <div className="max-w-xl mx-auto">
           <div className="mb-8">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <span className="text-2xl font-bold text-primary">Asutos</span>
+              <span className="text-2xl font-bold text-primary">Wetawork</span>
               <span className="text-2xl font-bold text-accent">Geeks</span>
             </Link>
             <h1 className="text-3xl font-bold text-foreground mb-1">Register as Professional</h1>

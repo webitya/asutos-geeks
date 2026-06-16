@@ -10,25 +10,25 @@ export default function Home() {
       key: 'Finance & Accounting',
       icon: '$',
       color: 'bg-purple-50 text-primary',
-      subcategories: ['Finance Modeling & Valuation', 'Fractional CFO & Advisory', 'Global Tax Strategy & Compliance', 'Finance & Auditing']
+      subcategories: ['Corporate Bookkeeping & Cloud Accounting', 'Finance Modeling & Valuation', 'Global Tax Strategy & Compliance', 'Fractional CFO & Advisory']
     },
     {
-      key: 'Legal Services',
+      key: 'Legal',
       icon: '⚖',
       color: 'bg-pink-50 text-accent',
-      subcategories: ['Intellectual Property (IP)', 'International Trade & Immigration', 'Real Estate & Personal Law', 'On-ground Legal Service']
+      subcategories: ['Corporate & Contract Law', 'Intellectual Property (IP)', 'Legal Research & Paralegal Services', 'International Trade & Immigration']
     },
     {
-      key: 'Video & Animation',
+      key: 'Video & Film',
       icon: '🎬',
       color: 'bg-indigo-50 text-indigo-600',
-      subcategories: ['Animation & Motion Graphics', '3D Modeling, VFX & CGI', 'Video Post-Production & Editing', 'On-ground Video Services']
+      subcategories: ['Video Editing & Post-Production', 'Animation & Motion Graphics', 'Streamer & Creator Support', 'AI Video & Generative Media']
     },
     {
-      key: 'Design & Graphics',
+      key: 'Graphics & Design',
       icon: '🎨',
       color: 'bg-violet-50 text-violet-700',
-      subcategories: ['UI/UX & Web Design', 'Architecture & Spatial Design', 'Marketing & Promotional Design', 'Packaging, Print & Product Design']
+      subcategories: ['Brand Identity & Corporate Graphics', 'Architecture & Spatial Design', 'UI/UX & Web Design', 'Marketing & Promotional Design']
     }
   ];
 
@@ -40,7 +40,7 @@ export default function Home() {
   ];
 
   const testimonials = [
-    { name: "Sophia Carter", role: "CEO, Nexa Corp", text: "Having our 3-Statement financial model prepared by Asutos Geeks was a game changer for our Series A funding. Absolute professionals." },
+    { name: "Sophia Carter", role: "CEO, Nexa Corp", text: "Having our 3-Statement financial model prepared by Wetawork was a game changer for our Series A funding. Absolute professionals." },
     { name: "Julian Alvarez", role: "Creator & Streamer", text: "The YouTuber rigging and custom overlays transformed my stream style. Fast delivery and exceptional creative talent!" },
     { name: "Hannah Goldstein", role: "Real Estate Director", text: "I hired an on-ground property surveyor here. Vetted profiles, secure payments, and outstanding communication throughout the process." }
   ];

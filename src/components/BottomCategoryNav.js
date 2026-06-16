@@ -14,7 +14,7 @@ export default function BottomCategoryNav() {
     },
     {
       label: "Legal",
-      href: "/professionals?category=Legal%20Services",
+      href: "/professionals?category=Legal",
       icon: (
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
@@ -23,7 +23,7 @@ export default function BottomCategoryNav() {
     },
     {
       label: "Video",
-      href: "/professionals?category=Video%20%26%20Animation",
+      href: "/professionals?category=Video%20%26%20Film",
       icon: (
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -32,7 +32,7 @@ export default function BottomCategoryNav() {
     },
     {
       label: "Design",
-      href: "/professionals?category=Design%20%26%20Graphics",
+      href: "/professionals?category=Graphics%20%26%20Design",
       icon: (
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
@@ -42,14 +42,14 @@ export default function BottomCategoryNav() {
   ];
 
   return (
-    <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 md:hidden w-[88%] max-w-sm">
-      <div className="bg-white/90 backdrop-blur-xl border border-purple-100 rounded-full px-6 py-3 shadow-2xl flex justify-between items-center gap-4">
+    <div className="fixed bottom-0 left-0 z-40 md:hidden w-full">
+      <div className="bg-white/95 backdrop-blur-xl border-t border-purple-100 rounded-t-[2rem] p-4 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)] grid grid-cols-2 gap-y-4 gap-x-2">
         {items.map((item, index) => (
-          <Link key={index} href={item.href} className="flex flex-col items-center gap-1 group">
+          <Link key={index} href={item.href} className="flex flex-col items-center gap-1.5 group">
             <div className="w-10 h-10 rounded-full bg-primary-light text-primary flex items-center justify-center border border-purple-100 transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:scale-110">
               {item.icon}
             </div>
-            <span className="text-[9px] font-normal uppercase tracking-wider text-gray-400 group-hover:text-primary transition-colors">
+            <span className="text-[9px] font-normal uppercase tracking-wider text-gray-400 group-hover:text-primary transition-colors text-center">
               {item.label}
             </span>
           </Link>
