@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import { CATEGORIES_DATA } from '@/lib/categories';
 
@@ -9,6 +9,36 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const scrollRef = useRef(null);
   const { data: session } = useSession();
+
+  const [categoriesData, setCategoriesData] = useState(CATEGORIES_DATA);
+
+  useEffect(() => {
+    fetch('/api/categories')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.data.length > 0) {
+          // Convert array from DB to the object format expected by Navbar
+          const dbCategories = {};
+          data.data.forEach(cat => {
+            const subcategoriesObj = {};
+            if (cat.subcategories) {
+              cat.subcategories.forEach(sub => {
+                subcategoriesObj[sub.name] = sub.services;
+              });
+            }
+            dbCategories[cat.label] = {
+              label: cat.label,
+              id: cat.categoryId,
+              color: cat.color,
+              icon: cat.icon,
+              subcategories: subcategoriesObj
+            };
+          });
+          setCategoriesData(dbCategories);
+        }
+      })
+      .catch(err => console.error("Failed to load categories", err));
+  }, []);
 
   const handleDropdownOpen = (key) => setActiveDropdown(key);
   const handleDropdownClose = () => setActiveDropdown(null);
@@ -150,7 +180,7 @@ export default function Navbar() {
           <div className="relative" onMouseLeave={handleDropdownClose}>
             {/* Using justify-start is critical here to avoid items clipping on the left side */}
             <div ref={scrollRef} className="flex space-x-8 h-11 items-center justify-start overflow-x-auto no-scrollbar w-full pb-1 scroll-smooth">
-              {Object.entries(CATEGORIES_DATA).map(([key, value]) => {
+              {Object.entries(categoriesData).map(([key, value]) => {
                 const isActive = activeDropdown === key;
                 return (
                   <button
@@ -171,12 +201,12 @@ export default function Navbar() {
             </div>
 
             {/* Mega Dropdown Rendered Outside the Overflow Container */}
-            {activeDropdown && CATEGORIES_DATA[activeDropdown] && (
+            {activeDropdown && categoriesData[activeDropdown] && (
               <div 
                 className="absolute left-0 top-11 w-full bg-white border border-gray-100 shadow-2xl rounded-b-[1.5rem] p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 z-50 animate-in fade-in slide-in-from-top-2 duration-200"
                 onMouseEnter={() => handleDropdownOpen(activeDropdown)}
               >
-                {Object.entries(CATEGORIES_DATA[activeDropdown].subcategories).map(([subTitle, items]) => (
+                {Object.entries(categoriesData[activeDropdown].subcategories).map(([subTitle, items]) => (
                   <div key={subTitle} className="flex flex-col">
                     <h4 className="text-[10px] font-medium text-primary uppercase tracking-wider border-b border-purple-50 pb-2 mb-3">
                       {subTitle}
@@ -195,6 +225,22 @@ export default function Navbar() {
                     </ul>
                   </div>
                 ))}
+                {/* Explore All Card pointing to dynamic category page */}
+                <div className="flex flex-col bg-slate-50 p-6 rounded-2xl border border-gray-100">
+                  <h4 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                    <span className="text-xl">🌟</span> Explore {activeDropdown}
+                  </h4>
+                  <p className="text-sm text-gray-500 mb-4 flex-1">
+                    Discover all our expert professionals and services in the {activeDropdown} category.
+                  </p>
+                  <Link 
+                    href={`/categories/${categoriesData[activeDropdown].id}`}
+                    className="mt-auto px-4 py-2 bg-white text-primary border border-gray-200 rounded-xl text-sm font-bold hover:border-primary hover:shadow-md transition-all text-center"
+                    onClick={handleDropdownClose}
+                  >
+                    View All {activeDropdown}
+                  </Link>
+                </div>
               </div>
             )}
           </div>

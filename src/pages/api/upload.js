@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     try {
       const { image } = req.body;
       const uploadedResponse = await cloudinary.uploader.upload(image, {
-        upload_preset: 'wetawork_geeks', // User should create this preset or I'll just use default
+        folder: 'wetawork_categories',
       });
       res.status(200).json({ success: true, url: uploadedResponse.secure_url });
     } catch (error) {

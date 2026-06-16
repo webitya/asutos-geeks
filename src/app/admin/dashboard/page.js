@@ -8,9 +8,13 @@ export default function Dashboard() {
 
   useEffect(() => {
     fetch('/api/admin/stats')
-      .then(res => res.json())
+      .then(res => res.ok ? res.json() : { success: false })
       .then(d => {
-        if (d.success) setData(d);
+        if (d && d.success) setData(d);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("Dashboard error:", err);
         setLoading(false);
       });
   }, []);
