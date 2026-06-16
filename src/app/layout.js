@@ -12,8 +12,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="overflow-x-hidden">
-      <body className={`${inter.className} overflow-x-hidden relative min-h-screen`}>
+    <html lang="en" className="overflow-x-clip">
+      <body className={`${inter.className} overflow-x-clip relative min-h-screen`}>
         <AuthProvider>
           <ConditionalLayout>
             {children}
