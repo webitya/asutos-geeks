@@ -132,7 +132,7 @@ export default function Navbar() {
       <div className="hidden md:block bg-gray-50 border-t border-gray-100 group/nav relative">
         {/* Left Scroll Arrow attached to absolute screen corner */}
         <div className="absolute left-0 top-0 h-11 w-16 flex items-center justify-start z-10 pointer-events-none bg-gradient-to-r from-gray-50 via-gray-50 to-transparent">
-           <button onClick={() => scrollRef.current?.scrollBy({ left: -250, behavior: 'smooth' })} className="pointer-events-auto w-11 h-8 rounded-r-full bg-gradient-to-r from-primary to-accent shadow-lg flex items-center justify-center text-white hover:scale-105 origin-left transition-all opacity-90 hover:opacity-100 gap-1 pr-1">
+           <button onClick={() => scrollRef.current?.scrollBy({ left: -250, behavior: 'smooth' })} className="cursor-pointer pointer-events-auto w-12 h-8 rounded-r-full bg-gradient-to-r from-primary to-accent shadow-lg flex items-center justify-center text-white hover:scale-105 origin-left transition-all opacity-90 hover:opacity-100 gap-1.5 pr-1">
              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" /></svg>
              <svg className="w-3.5 h-3.5 opacity-90 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" /></svg>
            </button>
@@ -140,7 +140,7 @@ export default function Navbar() {
 
         {/* Right Scroll Arrow attached to absolute screen corner */}
         <div className="absolute right-0 top-0 h-11 w-16 flex items-center justify-end z-10 pointer-events-none bg-gradient-to-l from-gray-50 via-gray-50 to-transparent">
-           <button onClick={() => scrollRef.current?.scrollBy({ left: 250, behavior: 'smooth' })} className="pointer-events-auto w-11 h-8 rounded-l-full bg-gradient-to-r from-accent to-primary shadow-lg flex items-center justify-center text-white hover:scale-105 origin-right transition-all opacity-90 hover:opacity-100 gap-1 pl-1">
+           <button onClick={() => scrollRef.current?.scrollBy({ left: 250, behavior: 'smooth' })} className="cursor-pointer pointer-events-auto w-12 h-8 rounded-l-full bg-gradient-to-r from-accent to-primary shadow-lg flex items-center justify-center text-white hover:scale-105 origin-right transition-all opacity-90 hover:opacity-100 gap-1.5 pl-1">
              <svg className="w-3.5 h-3.5 opacity-90 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" /></svg>
              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
            </button>
@@ -156,7 +156,7 @@ export default function Navbar() {
                   <button
                     key={key}
                     onMouseEnter={() => handleDropdownOpen(key)}
-                    className={`h-full flex items-center gap-1.5 text-[11px] font-normal tracking-wide transition-all border-b-2 whitespace-nowrap hover:text-primary shrink-0 ${
+                    className={`cursor-pointer h-full flex items-center gap-1.5 text-[11px] font-normal tracking-wide transition-all border-b-2 whitespace-nowrap hover:text-primary shrink-0 ${
                       isActive ? 'border-primary text-primary' : 'border-transparent text-gray-500'
                     }`}
                   >
